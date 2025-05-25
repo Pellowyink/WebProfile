@@ -1,0 +1,244 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, sans-serif;
+}
+
+body {
+    background-color: #f3e8d6; /* Light cream background */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Header Styles */
+.header1 {
+    background-color: #f3e8d6;
+    padding: 70px 10px;
+    text-align: center;
+}
+
+.tagline {
+    max-width: 900px;
+    margin: 0 auto;
+    color: #8b2323; /* Dark red color */
+    line-height: 1.6;
+    font-size: 16px;
+    padding: 0 15px;
+}
+
+/* Carousel Styles */
+.carousel-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.carousel-wrapper {
+    width: 80%;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+}
+
+.carousel-slide {
+    min-width: 25%;
+    padding: 0 10px;
+    transition: all 0.3s ease-in-out;
+    opacity: 1;
+    transform: scale(0.95);
+}
+
+.carousel-slide.active {
+    opacity: 1;
+    transform: scale(1.05);
+    z-index: 1;
+}
+
+.carousel-nav {
+    cursor: pointer;
+    padding: 10px;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.paw-arrow {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.paw-arrow:hover {
+    transform: scale(1.1);
+}
+
+.pastry-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    display: block;
+    background-color: #8b2323; /* Dark red background for image placeholders */
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.pastry-image:hover {
+    transform: translateY(-5px);
+}
+
+/* Carousel Dots */
+.carousel-dots {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #d3a794;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dot.active {
+    background-color: #8b2323; /* Dark red for active dot */
+    width: 12px;
+    height: 12px;
+}
+
+/* Treats Section Styles */
+.treats-section {
+    background-color: #8b2323; /* Dark red background */
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.section-title {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.section-subtitle {
+    font-size: 16px;
+    margin-bottom: 20px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.view-more {
+    margin-bottom: 30px;
+}
+
+.view-more-link {
+    color: #ffffff;
+    border-bottom: 1px solid #ffffff;
+    padding-bottom: 2px;
+    font-size: 16px;
+    transition: opacity 0.3s ease;
+}
+
+.view-more-link:hover {
+    opacity: 0.8;
+}
+
+.category-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.category-item {
+    flex: 1;
+    min-width: 200px;
+    max-width: 250px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.category-image {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-color: #ffffff; /* White background for image placeholders */
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.category-image:hover {
+    transform: translateY(-5px);
+}
+
+.category-title {
+    font-size: 18px;
+    margin-top: 10px;
+    font-weight: normal;
+    color: white;
+}
+
+
+/* Responsive Styles */
+@media (max-width: 900px) {
+    .carousel-slide {
+        min-width: 33.33%;
+    }
+}
+
+@media (max-width: 768px) {
+    .carousel-slide {
+        min-width: 50%;
+    }
+    
+    .category-container {
+        gap: 15px;
+    }
+    
+    .category-item {
+        min-width: 150px;
+        max-width: 200px;
+    }
+}
+
+@media (max-width: 576px) {
+    .carousel-slide {
+        min-width: 100%;
+    }
+    
+    .category-item {
+        min-width: 140px;
+        max-width: 160px;
+    }
+    
+    .section-title {
+        font-size: 28px;
+    }
+}

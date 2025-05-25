@@ -1,0 +1,90 @@
+/* Header Styles */
+header {
+    background-color: #f3e8d6;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+    margin-right: 15px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.logo img:hover {    
+    cursor: pointer;
+    transform: translateY(-5px);
+}
+
+.logo h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #9b3c2c;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Navigation and Dropdown Styles */
+nav ul {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin-left: 35px;
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #9b3c2c;
+    font-weight: 600;
+    transition: color 0.3s ease;
+    display: block;
+    padding: 5px 0;
+}
+
+nav ul li a:hover {
+    color: #d45c4c;
+}
+
+/* Dropdown Menu Styles */
+nav ul li .dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #f9f1e2;
+    width: 180px;
+    border-radius: 5px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    display: none;
+    z-index: 100;
+    padding: 10px 0;
+}
+
+nav ul li:hover .dropdown {
+    display: block;
+}
+
+nav ul li .dropdown li {
+    margin: 0;
+    width: 100%;
+}
+
+nav ul li .dropdown li a {
+    padding: 10px 15px;
+    display: block;
+    font-size: 14px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav ul li .dropdown li a:hover {
+    background-color: rgba(155, 60, 44, 0.1);
+}

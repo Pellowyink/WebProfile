@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/shop.css">
+    <link rel="stylesheet" href="Css/header.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="Css/footer.css">
+    <title>Shop </title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="images/nekopan.png" alt="Neko Pan Logo"></a>
+            <h1>NEKO PAN</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li>
+                    <a href="about.html">Pages</a>
+                    <ul class="dropdown">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="privacypolicy.html">Privacy Policy</a></li>
+                        <li><a href="FAQ.html">FAQ's</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="blog.html">Blog</a>
+                    <ul class="dropdown">
+                        <li><a href="blog.html">Latest Posts</a></li>
+                        <li><a href="blog.html">Comment</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="shop.html">Shop</a>
+                    <ul class="dropdown">
+                        <li><a href="shop.html">All Products</a></li>
+                        <li><a href="cart.html">Cart</a></li>
+                        <li><a href="checkout.html">Checkout</a></li>
+                    </ul>
+                </li>               
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero-section">
+        <div class="container">
+            <h1>Shop</h1>
+            <div class="breadcrumb">
+                <a href="index.html">Home /</a> <span>Shop</span>
+            </div>
+        </div>
+    </section>
+
+    <br><br>
+
+    <!-- MAIN SHOP CONTAINER -->
+    <div class="shop-container">
+    
+        <div class="shop-header">
+            <div class="view-toggle">
+                <button class="view-btn active" id="gridView">⊞</button>
+                <button class="view-btn" id="listView">☰</button>
+            </div>
+
+            <div class="results-info">
+                Showing <span id="resultCount">9</span> of 9 Results
+            </div>
+
+            <select class="sort-dropdown" id="sortSelect">
+                <option value="default">Default</option>
+                <option value="priceAsc">Price: Low to High</option>
+                <option value="priceDesc">Price: High to Low</option>
+                <option value="nameAsc">Name: A to Z</option>
+                <option value="nameDesc">Name: Z to A</option>
+            </select>
+        </div>
+
+        <!-- PRODUCTS GRID SECTION -->
+        <div class="products-grid" id="productsGrid">
+            
+            <div class="product-card" data-name="Shokupan" data-price="85">
+                <div class="product-image">
+                    <img src="image/shokupan.webp" alt="Shokupan">
+                </div>
+                <div class="product-info">
+                    <div class="product-name">Shokupan</div>
+                    <div class="product-description">Soft, fluffy Japanese milk bread with a pillowy texture that melts in your mouth. Perfect for breakfast or as a sweet treat!</div>
+                    <div class="product-price">¥85</div>
+                    <button class="buy-btn" onclick="addToCart('Shokupan', 85)">Add to cart</button>
+                </div>
+            </div>
+                
+            <div class="product-card" data-name="Kookie" data-price="120">
+                <div class="product-image">
+                    <img src="image/kookie.webp" alt="Kookie">
+                </div>
+                <div class="product-info">
+                    <div class="product-name">Kookie</div>
+                    <div class="product-description">Crispy, golden cookies with a delightful crunch and rich buttery flavor. Made with premium ingredients for the perfect bite every time.</div>
+                    <div class="product-price">¥120</div>
+                    <button class="buy-btn" onclick="addToCart('Kookie', 120)">Add to cart</button>
+                </div>
+            </div>
+                    
+            <div class="product-card" data-name="Ragamuffin" data-price="95">
+                <div class="product-image">
+                    <img src="/image/ragamuffin.webp" alt="Ragamuffin">
+                </div>
+                
+                <div class="product-info">
+                    <div class="product-name">Ragamuffin</div>
+                    <div class="product-description">Hearty, rustic muffin bursting with fresh berries and nuts. A wholesome treat that's perfect with your morning coffee.</div>
+                    <div class="product-price">¥95</div>
+                    <button class="buy-btn" onclick="addToCart('Ragamuffin', 95)">Add to cart</button>
+                </div>
+            </div>
+                
+            <div class="product-card" data-name="Scottish Fold" data-price="110">
+                <div class="product-image">
+                    <img src="/image/scottishfold.jpg" alt="Scottish Fold">
+                </div>
+        
+                <div class="product-info">
+                    <div class="product-name">Scottish Fold</div>
+                    <div class="product-description">Delicate, flaky pastry folded to perfection with layers of buttery goodness. A traditional recipe with a modern twist.</div>
+                    <div class="product-price">¥110</div>
+                    <button class="buy-btn" onclick="addToCart('Scottish Fold', 110)">Add to cart</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-name="Calico Pan" data-price="75">
+                <div class="product-image">
+                    <img src="/image/calicopan.jpg" alt="Calico Pan">
+                </div>
+
+                <div class="product-info">
+                    <div class="product-name">Calico Pan</div>
+                    <div class="product-description">Colorful, artisanal bread with a beautiful marbled pattern. Each slice reveals a stunning mix of flavors and textures.</div>
+                    <div class="product-price">¥75</div>
+                    <button class="buy-btn" onclick="addToCart('Calico Pan', 75)">Add to cart</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-name="Mittens" data-price="75">
+                <div class="product-image">
+                    <img src="image/calicopan2.webp" alt="Shokupan">
+                </div>
+                <div class="product-info">
+                    <div class="product-name">Mittens</div>
+                    <div class="product-description">Colorful, artisanal bread with a beautiful marbled pattern. Each slice reveals a stunning mix of flavors and textures.</div>
+                    <div class="product-price">¥75</div>
+                    <button class="buy-btn" onclick="addToCart('Mittens', 75)">Add to cart</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-name="Munchkins" data-price="140">
+                <div class="product-image">
+                    <img src="image/munchkins.webp" alt="Shokupan">
+                </div>
+                <div class="product-info">
+                    <div class="product-name">Munchkins</div>
+                    <div class="product-description">Golden, buttery cakes with a soft center and crisp edges. Simple, comforting, and irresistibly cute.</div>
+                    <div class="product-price">¥140</div>
+                    <button class="buy-btn" onclick="addToCart('Mittens', 140)">Add to cart</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-name="Tabby Cakes" data-price="80">
+                <div class="product-image">
+                    <img src="image/tabbycakes.webp" alt="Shokupan">
+                </div>
+                <div class="product-info">
+                    <div class="product-name">Tabby Cakes</div>
+                    <div class="product-description">Golden, buttery cakes with a soft center and crisp edges. Simple, comforting, and irresistibly cute.</div>
+                    <div class="product-price">¥80</div>
+                    <button class="buy-btn" onclick="addToCart('Tabby Cakes', 80)">Add to cart</button>
+                </div>
+            </div>
+               
+            <div class="product-card" data-name="Fawn Pan" data-price="105">
+                <div class="product-image">
+                    <img src="image/fawnpan.jpg" alt="Fawn Pan">
+                </div>
+               
+                <!-- Product Information Container -->
+                <div class="product-info">
+                    <div class="product-name">Fawn Pan</div>
+                    <div class="product-description">Elegant, caramel-colored bread with a subtle sweetness and tender crumb. A sophisticated choice for discerning palates.</div>
+                    <div class="product-price">¥105</div>
+                    <button class="buy-btn" onclick="addToCart('Fawn Pan', 105)">Add to cart</button>
+                </div>
+            </div>
+        </div> 
+    </div>
+    <br> <br>   
+    <hr>   
+
+    <!-- Footer would go here -->
+    <footer class="footer">
+        <!-- Left Column -->
+        <div class="footer-left">
+            <div class="footer-logo">
+                <a href="index.html"><img src="images/nekopan.png" alt="Neko Pan Logo"></a>
+                <h2>NEKO PAN</h2>
+            </div>
+            <p class="footer-text">
+                Lorem ipsum gravida nibh vel velit auctor aliquet. sollicitudin quibibendum auci elit cons equat ipsuis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt.
+            </p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com"><img src="images/facebook.png" alt="Facebook"></a>
+                <a href="https://www.instagram.com"><img src="images/instagram.png" alt="Instagram"></a>
+                <a href="https://mail.google.com/mail"><img src="images/envelope-plus.png" alt="Email"></a>
+            </div>
+        </div>
+
+        <!-- Center Column - Sitemap -->
+        <div class="footer-center">
+            <div class="sitemap-col">
+                <h3>Sitemap</h3>
+                <a href="index.html">Home</a>
+                <a href="about.html">About us</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="contact.html">Contact</a>
+                <a href="privacypolicy.html">Policy</a>
+                <a href="blog.html">Blog</a>
+            </div>
+            <div class="sitemap-col">
+                <h3>Support</h3>
+                <a href="shop.html">Shop</a>
+                <a href="about.html">Reviews</a>
+                <a href="FAQ.html">FAQs</a>
+                <a href="privacypolicy.html">Privacy</a>
+            </div>
+        </div>
+
+        <!-- Right Column - Contact -->
+        <div class="footer-right">
+            <h3>Contact Us</h3>
+            <br>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <img src="images/marker.png" alt="Location">
+                    <div class="contact-text">
+                        Mission Plaza Bldg, MacArthur<br>
+                        Hwy, Angeles City, Pampanga
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <img src="images/at.png" alt="Email">
+                    <div class="contact-text">hello.nekopan@gmail.com</div>
+                </div>
+                <div class="contact-item">
+                    <img src="images/phone.png" alt="Phone">
+                    <div class="contact-text">+3 123 456 789</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/shop.js"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+/* Policy Section Styling */
+.policy-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    font-family: 'Arial', sans-serif;
+}
+
+.policy-section {
+    background-color: #f8f3eb;
+    border-radius: 8px;
+    padding: 30px;
+    margin-bottom: 40px;
+    border-left: 5px solid #a34235;
+}
+
+.policy-title {
+    color: #a34235;
+    font-size: 28px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.policy-content {
+    color: #703629;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.policy-question {
+    color: #a34235;
+    font-size: 24px;
+    margin: 30px 0 15px;
+    font-weight: bold;
+}
+
+.policy-answer {
+    color: #703629;
+    line-height: 1.6;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .policy-section {
+        padding: 20px;
+    }
+    
+    .policy-title {
+        font-size: 24px;
+    }
+    
+    .policy-question {
+        font-size: 20px;
+    }
+}
